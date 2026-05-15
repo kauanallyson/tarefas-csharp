@@ -9,13 +9,5 @@ namespace Tarefas.Data
         { }
 
         public DbSet<Tarefa> Tarefas { get; set; }
-
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<Tarefa>().HasData(
-                new Tarefa { Id = 1, Desc = "Compilar o código", Terminado = true },
-                new Tarefa { Id = 2, Desc = "Corrigir bug",      Terminado = false }
-            );
-        }
     }
 }
